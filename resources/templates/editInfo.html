@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Game Record</title>
+</head>
+<body>
+
+{{#playerName}}
+{{#modifyRecord}}
+
+    <form action="/edit-game" method="post">
+        <input type="text" placeholder="enter player one" name="playerOne"/>
+        <button type="submit">Enter game</button>
+    </form>
+
+{{/modifyRecord}}
+{{/playerName}}
+
+</body>
+</html>
