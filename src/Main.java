@@ -73,8 +73,11 @@ public class Main {
             Session session = request.session();
             String gameOwner = session.attribute("playerName");
             String playerOne = request.queryParams("playerOne");
+            String playerTwo = request.queryParams("playerTwo");
+            String playerOneScore = request.queryParams("playerOneScore");
+            String playerTwoScore = request.queryParams("playerTwoScore");
 
-            Game game = new Game(games.size(), gameOwner ,playerOne);
+            Game game = new Game(games.size(), gameOwner ,playerOne, playerTwo, playerOneScore, playerTwoScore);
 
             games.add(game);
 
@@ -129,8 +132,11 @@ public class Main {
             int gameId = session.attribute("gameId");
 
             String playerOne = request.queryParams("playerOne");
+            String playerTwo = request.queryParams("playerTwo");
+            String playerOneScore = request.queryParams("playerOneScore");
+            String playerTwoScore = request.queryParams("playerTwoScore");
 
-            Game game = new Game(games.size(), playerName, playerOne);
+            Game game = new Game(games.size(), playerName, playerOne, playerTwo, playerOneScore, playerTwoScore);
             games.set(gameId, game);
 
             response.redirect("/");
