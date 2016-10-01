@@ -33,12 +33,11 @@ public class Game {
         this.playerOneScore = playerOneScore;
         this.playerTwoScore = playerTwoScore;
 
-        //this.gameOwner = gameOwner;
-        //this.modifyRecord = modifyRecord;
     }
 
     @Override
     public String toString() {
-        return "player one: "+playerOne;
+        return "player one: "+playerOne+" player two: "+ playerTwo
+                + "player one score: "+ playerOneScore + "player two score: "+playerTwoScore;
     }
 }
